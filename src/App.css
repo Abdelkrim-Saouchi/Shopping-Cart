@@ -10,10 +10,12 @@
   min-height: 100dvh;
   min-height: 100vh;
   font-size: 24px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .container {
-  padding: 16px 32px;
+  padding: 16px 48px;
 }
 
 /* ---- Header ------ */
@@ -75,3 +77,10 @@ ul.nav-links img {
 }
 
 /*----------------------*/
+
+/*------Footer----------*/
+footer {
+  text-align: center;
+}
+
+/*-----------------------*/
