@@ -22,7 +22,7 @@ const Card = ({
 
   const changeQuantity = (e) => {
     const quantity = Number(e.target.value);
-    setQuantity(quantity);
+    if (!isNaN(quantity)) setQuantity(quantity);
   };
 
   return (
