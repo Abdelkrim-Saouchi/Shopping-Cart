@@ -15,10 +15,10 @@ const Products = () => {
         setProducts(selectedProducts);
       })
       .catch((error) => {
-        navigate('/error');
+        navigate('/fetch-error');
         console.log(error);
       });
-  }, []);
+  }, [navigate]);
 
   return (
     <main className="container">
