@@ -1,7 +1,10 @@
 // https://www.freepik.com/free-photo/cheerful-satisfied-customer-holding-shopping-bags_8132438.htm
+import { useNavigate } from 'react-router-dom';
 import heroImg from '../assets/cheerful-satisfied-customer-holding-shopping-bags.jpg';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <main className="Home container">
       <div className="hero-section-text">
@@ -16,7 +19,7 @@ const Home = () => {
           experience. Browse our diverse range of products, find what you love,
           and let us take care of the rest.
         </p>
-        <button>Explore Now</button>
+        <button onClick={() => navigate('/products')}>Explore Now</button>
       </div>
       <img src={heroImg} alt="hero section img" />
     </main>
