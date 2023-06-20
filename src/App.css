@@ -39,6 +39,25 @@ ul.nav-links img {
 
 /* ---------------------*/
 
+/*-----CartIcon ------*/
+.cart-icon-wrapper {
+  position: relative;
+}
+
+.products-counter {
+  background-color: red;
+  color: white;
+  padding: 1px 2px;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*----------------------*/
+
 /* -----Home -----------*/
 .Home {
   display: flex;

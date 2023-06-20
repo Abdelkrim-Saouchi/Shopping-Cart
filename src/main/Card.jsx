@@ -1,14 +1,23 @@
 import { useState } from 'react';
 
-const Card = ({ imgSrc, productName, price }) => {
+const Card = ({
+  imgSrc,
+  productName,
+  price,
+  incrementProductsNumber,
+  decrementProductsNumber,
+}) => {
   const [quantity, setQuantity] = useState(0);
+  const [added, setAdded] = useState(false);
 
   const incrementQuantity = () => {
     setQuantity(quantity + 1);
   };
 
   const decrementQuantity = () => {
-    setQuantity(quantity - 1);
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
   };
 
   const changeQuantity = (e) => {
@@ -37,7 +46,23 @@ const Card = ({ imgSrc, productName, price }) => {
           +
         </button>
       </div>
-      <button>Add to Cart</button>
+      {quantity > 0 ? (
+        <button
+          onClick={() => {
+            if (added) {
+              setAdded(false);
+              decrementProductsNumber();
+            } else {
+              setAdded(true);
+              incrementProductsNumber();
+            }
+          }}
+        >
+          {added ? 'Added to Cart' : 'Add to Cart'}
+        </button>
+      ) : (
+        <button>Add to Cart</button>
+      )}
     </div>
   );
 };

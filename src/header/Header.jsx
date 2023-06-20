@@ -1,7 +1,6 @@
-import cartIcon from '../assets/cart-4-svgrepo-com.svg';
 import { Link } from 'react-router-dom';
-
-const Header = () => {
+import CartIcon from './CartIcon';
+const Header = ({ productsNumber }) => {
   return (
     <header className="container">
       <h1>FutureStore</h1>
@@ -16,7 +15,7 @@ const Header = () => {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <img src={cartIcon} alt="cart icon" />
+          <CartIcon productsNumber={productsNumber} />
         </li>
       </ul>
     </header>
