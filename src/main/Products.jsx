@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import Card from './Card';
+import { useNavigate } from 'react-router-dom';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('https://dummyjson.com/products')
@@ -13,7 +15,8 @@ const Products = () => {
         setProducts(selectedProducts);
       })
       .catch((error) => {
-        throw new Error(error);
+        navigate('/error');
+        console.log(error);
       });
   }, []);
 
