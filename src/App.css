@@ -89,7 +89,7 @@ footer {
 
 .card {
   width: 200px;
-  height: 320px;
+  height: 380px;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -118,6 +118,23 @@ footer {
 
 .card p {
   opacity: 0.7;
+}
+
+.card .quantity {
+  display: flex;
+  height: 10%;
+  justify-content: center;
+}
+
+.card .quantity input {
+  width: 40%;
+  text-align: center;
+}
+
+.card .quantity button {
+  height: 100%;
+  width: 15%;
+  padding: 5px;
 }
 
 .card button {
