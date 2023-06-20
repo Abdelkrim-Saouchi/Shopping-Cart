@@ -61,7 +61,16 @@ const Card = ({
           {added ? 'Added to Cart' : 'Add to Cart'}
         </button>
       ) : (
-        <button>Add to Cart</button>
+        <button
+          onClick={() => {
+            if (added) {
+              setAdded(false);
+              decrementProductsNumber();
+            }
+          }}
+        >
+          {added ? 'Added to Cart' : 'Add to Cart'}
+        </button>
       )}
     </div>
   );
