@@ -19,6 +19,7 @@ const Products = () => {
       <div className="cards-container">
         {products.map((product) => (
           <Card
+            key={product.id}
             imgSrc={product.images[0]}
             productName={product.title}
             price={product.price}
