@@ -1,4 +1,5 @@
 import cartIcon from '../assets/cart-4-svgrepo-com.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -6,13 +7,13 @@ const Header = () => {
       <h1>FutureStore</h1>
       <ul className="nav-links">
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#">Products</a>
+          <Link to="/products">Products</Link>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
         <li>
           <img src={cartIcon} alt="cart icon" />
