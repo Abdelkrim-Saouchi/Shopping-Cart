@@ -154,3 +154,22 @@ footer {
 }
 
 /*--------------------------*/
+
+/*-------Contact -----------*/
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social-links {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+.social-links img {
+  width: 50px;
+  /* margin: 32px; */
+}
+
+/*-------------------------*/
