@@ -11,6 +11,9 @@ const Products = () => {
         console.log(json.products);
         const selectedProducts = json.products.slice(0, 20);
         setProducts(selectedProducts);
+      })
+      .catch((error) => {
+        throw new Error(error);
       });
   }, []);
 
