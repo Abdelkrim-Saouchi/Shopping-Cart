@@ -49,6 +49,7 @@ const Card = ({
       </div>
       {quantity > 0 ? (
         <button
+          className="add-to-cart"
           onClick={() => {
             if (added) {
               setAdded(false);
@@ -63,6 +64,7 @@ const Card = ({
         </button>
       ) : (
         <button
+          className="add-to-cart"
           onClick={() => {
             if (added) {
               setAdded(false);

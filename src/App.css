@@ -12,6 +12,7 @@
   --Secondary-Color: #ffffff;
   --Accent-Color-1: #f2c511;
   --Accent-Color-2: #e74c3c;
+  --light-grey: #f5f5f5;
 }
 
 .App {
@@ -78,8 +79,8 @@ ul.nav-links img {
 }
 
 .products-counter {
-  background-color: red;
-  color: white;
+  background-color: var(--Accent-Color-2);
+  color: var(--Secondary-Color);
   padding: 1px 2px;
   border-radius: 50%;
   font-size: 1rem;
@@ -157,7 +158,7 @@ footer a:is(:hover, :focus) {
 /* -------Card -----------*/
 
 .card {
-  width: 200px;
+  width: 250px;
   height: 380px;
   padding: 16px;
   display: flex;
@@ -165,8 +166,9 @@ footer a:is(:hover, :focus) {
   align-items: center;
   gap: 12px;
   font-size: inherit;
-  background-color: rgba(128, 128, 128, 0.386);
   border-radius: 12px;
+  background-color: var(--Secondary-Color);
+  color: var(--Primary-Color);
 }
 
 .card img {
@@ -198,6 +200,7 @@ footer a:is(:hover, :focus) {
 .card .quantity input {
   width: 40%;
   text-align: center;
+  color: inherit;
 }
 
 .card .quantity button {
@@ -211,14 +214,25 @@ footer a:is(:hover, :focus) {
   padding: 8px 12px;
   font-size: 1rem;
   cursor: pointer;
+  background-color: var(--Accent-Color-1);
+  color: var(--Primary-Color);
+  border: 0;
+}
+
+.add-to-cart:is(:hover, :focus) {
+  scale: 1.1;
 }
 
 /*------------------------*/
 
 /*---------Products-----------*/
+main {
+  background-color: var(--light-grey);
+}
+
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
   gap: 16px;
 }
 
