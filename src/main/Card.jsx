@@ -1,11 +1,14 @@
 import { useState } from 'react';
 
 const Card = ({
+  id,
   imgSrc,
   productName,
   price,
   incrementProductsNumber,
   decrementProductsNumber,
+  addProductToCart,
+  deleteProductFromCart,
 }) => {
   const [quantity, setQuantity] = useState(0);
   const [added, setAdded] = useState(false);
@@ -52,9 +55,11 @@ const Card = ({
             if (added) {
               setAdded(false);
               decrementProductsNumber();
+              deleteProductFromCart(id);
             } else {
               setAdded(true);
               incrementProductsNumber();
+              addProductToCart(id, productName, imgSrc, price, quantity);
             }
           }}
         >
@@ -66,6 +71,7 @@ const Card = ({
             if (added) {
               setAdded(false);
               decrementProductsNumber();
+              deleteProductFromCart(id);
             }
           }}
         >

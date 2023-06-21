@@ -214,6 +214,31 @@ footer {
   right: 0;
   background-color: rgb(180, 179, 179);
   padding: 16px 48px;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 450px;
+}
+
+.shopping-list li {
+  display: flex;
+  gap: 8px;
+  margin-block: 16px;
+  position: relative;
+}
+
+.shopping-list img {
+  width: 40%;
+}
+
+.shopping-list li span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: red;
+  cursor: pointer;
 }
 
 /*------------------------*/

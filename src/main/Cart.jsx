@@ -1,8 +1,27 @@
-const Cart = ({ toggleCart }) => {
+const Cart = ({ toggleCart, cartList, deleteProductFromCart }) => {
+  const shoppingList = cartList.map((item) => {
+    return (
+      <li key={item.id}>
+        <span onClick={() => deleteProductFromCart(item.id)}>X</span>
+        <img src={item.img} alt="product img" />
+        <div className="text">
+          <p>{item.name}</p>
+          <p>{item.price}$</p>
+          <p>Q: {item.quantity}</p>
+        </div>
+      </li>
+    );
+  });
+
   return (
     <div className="shopping-cart">
       <h2>Your Shopping Cart</h2>
-      <p>Cart is empty</p>
+      {cartList.length > 0 ? (
+        <ul className="shopping-list">{shoppingList}</ul>
+      ) : (
+        <p>Cart is empty</p>
+      )}
+
       <p>Total: 0.00</p>
       <button>Checkout</button>
       <button onClick={toggleCart}>Close</button>

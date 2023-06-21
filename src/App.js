@@ -13,6 +13,7 @@ import Cart from './main/Cart';
 function App() {
   const [productsNumber, setProductsNumber] = useState(0);
   const [showed, setShowed] = useState(false);
+  const [cartList, setCartList] = useState([]);
 
   const incrementProductsNumber = () => setProductsNumber(productsNumber + 1);
 
@@ -26,6 +27,15 @@ function App() {
     setShowed(!showed);
   };
 
+  const addProductToCart = (id, name, img, price, quantity) => {
+    setCartList([...cartList, { id, name, img, price, quantity }]);
+  };
+
+  const deleteProductFromCart = (id) => {
+    const newCartList = cartList.filter((item) => item.id !== id);
+    setCartList(newCartList);
+  };
+
   return (
     <div className="App">
       <Header productsNumber={productsNumber} toggleCart={toggleCart} />
@@ -37,6 +47,8 @@ function App() {
             <Products
               incrementProductsNumber={incrementProductsNumber}
               decrementProductsNumber={decrementProductsNumber}
+              addProductToCart={addProductToCart}
+              deleteProductFromCart={deleteProductFromCart}
             />
           }
         />
@@ -44,7 +56,13 @@ function App() {
         <Route path="/fetch-error" element={<FetchFailed />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      {showed && <Cart toggleCart={toggleCart} />}
+      {showed && (
+        <Cart
+          toggleCart={toggleCart}
+          cartList={cartList}
+          deleteProductFromCart={deleteProductFromCart}
+        />
+      )}
       <Footer />
     </div>
   );
