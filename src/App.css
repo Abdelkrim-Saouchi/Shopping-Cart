@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700;800&display=swap');
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --Primary-Color: #2c3e50;
+  --Secondary-Color: #ffffff;
+  --Accent-Color-1: #f2c511;
+  --Accent-Color-2: #e74c3c;
 }
 
 .App {
@@ -27,6 +35,9 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
+  background-color: var(--Primary-Color);
+  color: var(--Secondary-Color);
+  font-family: 'Montserrat';
 }
 
 ul.nav-links {
@@ -35,6 +46,15 @@ ul.nav-links {
   gap: 16px;
   align-items: center;
   cursor: pointer;
+}
+
+ul.nav-links a {
+  text-decoration: none;
+  color: var(--Secondary-Color);
+}
+
+ul.nav-links a:is(:hover, :focus) {
+  color: var(--Accent-Color-1);
 }
 
 ul.nav-links img {
@@ -46,6 +66,15 @@ ul.nav-links img {
 /*-----CartIcon ------*/
 .cart-icon-wrapper {
   position: relative;
+  background-color: var(--Secondary-Color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon-wrapper:is(:hover, :focus) {
+  background-color: var(--Accent-Color-1);
 }
 
 .products-counter {
@@ -67,6 +96,8 @@ ul.nav-links img {
   display: flex;
   justify-content: center;
   gap: 32px;
+  font-family: 'Montserrat';
+  color: var(--Primary-Color);
 }
 
 .Home img {
@@ -79,6 +110,7 @@ ul.nav-links img {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  font-family: 'Open sans';
 }
 
 .hero-section-text p {
@@ -93,6 +125,8 @@ ul.nav-links img {
   outline: transparent;
   font-size: inherit;
   cursor: pointer;
+  background-color: var(--Accent-Color-1);
+  color: var(--Primary-Color);
 }
 
 .hero-section-text button:is(:hover, :focus) {
@@ -104,6 +138,18 @@ ul.nav-links img {
 /*------Footer----------*/
 footer {
   text-align: center;
+  background-color: var(--Primary-Color);
+  color: var(--Secondary-Color);
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:is(:hover, :focus) {
+  text-decoration: underline;
+  color: var(--Accent-Color-1);
 }
 
 /*-----------------------*/
