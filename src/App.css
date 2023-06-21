@@ -12,6 +12,7 @@
   font-size: 24px;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  position: relative;
 }
 
 .container {
@@ -201,6 +202,18 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*------------------------*/
+
+/*------Cart -------------*/
+.shopping-cart {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: rgb(180, 179, 179);
+  padding: 16px 48px;
 }
 
 /*------------------------*/

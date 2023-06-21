@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import CartIcon from './CartIcon';
-const Header = ({ productsNumber }) => {
+const Header = ({ productsNumber, toggleCart }) => {
   return (
     <header className="container">
       <h1>FutureStore</h1>
@@ -15,7 +15,7 @@ const Header = ({ productsNumber }) => {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <CartIcon productsNumber={productsNumber} />
+          <CartIcon productsNumber={productsNumber} toggleCart={toggleCart} />
         </li>
       </ul>
     </header>
