@@ -221,11 +221,20 @@ footer {
   width: 450px;
 }
 
+.shopping-list {
+  list-style: none;
+  border: 2px solid black;
+  padding: 8px;
+  margin-block: 16px;
+}
+
 .shopping-list li {
   display: flex;
   gap: 8px;
   margin-block: 16px;
   position: relative;
+  border: 2px solid black;
+  padding: 8px;
 }
 
 .shopping-list img {
@@ -239,6 +248,22 @@ footer {
   color: white;
   background-color: red;
   cursor: pointer;
+  font-size: 16px;
+}
+
+.shopping-cart .empty {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  padding: 8px;
+  text-align: center;
+  margin-block: 16px;
+}
+
+.shopping-cart button {
+  width: 120px;
+  font-size: inherit;
+  margin-top: 16px;
 }
 
 /*------------------------*/

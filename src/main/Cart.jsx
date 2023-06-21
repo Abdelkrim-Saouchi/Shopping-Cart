@@ -33,7 +33,7 @@ const Cart = ({
       {cartList.length > 0 ? (
         <ul className="shopping-list">{shoppingList}</ul>
       ) : (
-        <p>Cart is empty</p>
+        <p className="empty">Cart is empty</p>
       )}
 
       <p>Total: {total} $</p>
