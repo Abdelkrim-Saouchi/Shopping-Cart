@@ -244,6 +244,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--Primary-Color);
 }
 .social-links {
   display: flex;
@@ -252,7 +253,10 @@ main {
 }
 .social-links img {
   width: 50px;
-  /* margin: 32px; */
+}
+
+.social-links img:is(:hover, :focus) {
+  scale: 1.1;
 }
 
 /*-------------------------*/
