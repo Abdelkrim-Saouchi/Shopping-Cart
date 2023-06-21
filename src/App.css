@@ -283,6 +283,8 @@ main {
   align-items: center;
   flex-direction: column;
   width: 450px;
+  background-color: var(--light-grey);
+  color: var(--Primary-Color);
 }
 
 .shopping-list {
@@ -297,20 +299,23 @@ main {
   gap: 8px;
   margin-block: 16px;
   position: relative;
-  border: 2px solid black;
+  border: 2px solid var(--Primary-Color);
   padding: 8px;
+  background-color: var(--Secondary-Color);
+  height: 150px;
 }
 
 .shopping-list img {
   width: 40%;
+  height: 80%;
 }
 
 .shopping-list li span {
   position: absolute;
   top: 0;
   right: 0;
-  color: white;
-  background-color: red;
+  color: var(--Secondary-Color);
+  background-color: var(--Accent-Color-2);
   cursor: pointer;
   font-size: 16px;
 }
@@ -318,7 +323,7 @@ main {
 .shopping-cart .empty {
   width: 200px;
   height: 200px;
-  border: 2px solid black;
+  border: 2px solid var(--Primary-Color);
   padding: 8px;
   text-align: center;
   margin-block: 16px;
@@ -328,6 +333,15 @@ main {
   width: 120px;
   font-size: inherit;
   margin-top: 16px;
+  background-color: var(--Accent-Color-1);
+  color: inherit;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.shopping-cart button:is(:hover, :focus) {
+  scale: 1.1;
 }
 
 /*------------------------*/
