@@ -2,12 +2,7 @@ import { useEffect, useState } from 'react';
 import Card from './Card';
 import { useNavigate } from 'react-router-dom';
 
-const Products = ({
-  incrementProductsNumber,
-  decrementProductsNumber,
-  addProductToCart,
-  deleteProductFromCart,
-}) => {
+const Products = ({ addProductToCart, deleteProductFromCart }) => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
@@ -34,8 +29,6 @@ const Products = ({
             imgSrc={product.images[0]}
             productName={product.title}
             price={product.price}
-            incrementProductsNumber={incrementProductsNumber}
-            decrementProductsNumber={decrementProductsNumber}
             addProductToCart={addProductToCart}
             deleteProductFromCart={deleteProductFromCart}
           />

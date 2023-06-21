@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Footer from './footer/Footer';
 import Header from './header/Header';
@@ -11,17 +11,14 @@ import { Routes, Route } from 'react-router-dom';
 import Cart from './main/Cart';
 
 function App() {
-  const [productsNumber, setProductsNumber] = useState(0);
   const [showed, setShowed] = useState(false);
   const [cartList, setCartList] = useState([]);
+  const [productsNumber, setProductsNumber] = useState(0);
+  const [total, setTotal] = useState(0);
 
-  const incrementProductsNumber = () => setProductsNumber(productsNumber + 1);
-
-  const decrementProductsNumber = () => {
-    if (productsNumber > 0) {
-      setProductsNumber(productsNumber - 1);
-    }
-  };
+  useEffect(() => {
+    setProductsNumber(cartList.length);
+  }, [cartList, productsNumber]);
 
   const toggleCart = () => {
     setShowed(!showed);
@@ -36,6 +33,15 @@ function App() {
     setCartList(newCartList);
   };
 
+  const calculateTotal = () => {
+    const prices = cartList.map((item) => item.price * item.quantity);
+    if (prices.length < 1) return setTotal(0);
+    const sum = prices.reduce(
+      (accumulator, currentValue) => accumulator + currentValue
+    );
+    setTotal(sum);
+  };
+
   return (
     <div className="App">
       <Header productsNumber={productsNumber} toggleCart={toggleCart} />
@@ -45,8 +51,6 @@ function App() {
           path="/products"
           element={
             <Products
-              incrementProductsNumber={incrementProductsNumber}
-              decrementProductsNumber={decrementProductsNumber}
               addProductToCart={addProductToCart}
               deleteProductFromCart={deleteProductFromCart}
             />
@@ -61,6 +65,8 @@ function App() {
           toggleCart={toggleCart}
           cartList={cartList}
           deleteProductFromCart={deleteProductFromCart}
+          total={total}
+          calculateTotal={calculateTotal}
         />
       )}
       <Footer />

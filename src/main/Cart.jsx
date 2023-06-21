@@ -1,4 +1,16 @@
-const Cart = ({ toggleCart, cartList, deleteProductFromCart }) => {
+import { useEffect } from 'react';
+
+const Cart = ({
+  toggleCart,
+  cartList,
+  deleteProductFromCart,
+  total,
+  calculateTotal,
+}) => {
+  useEffect(() => {
+    calculateTotal();
+  }, [cartList, total]);
+
   const shoppingList = cartList.map((item) => {
     return (
       <li key={item.id}>
@@ -6,12 +18,14 @@ const Cart = ({ toggleCart, cartList, deleteProductFromCart }) => {
         <img src={item.img} alt="product img" />
         <div className="text">
           <p>{item.name}</p>
-          <p>{item.price}$</p>
+          <p>{item.price} $</p>
           <p>Q: {item.quantity}</p>
         </div>
       </li>
     );
   });
+
+  console.log('total:', total);
 
   return (
     <div className="shopping-cart">
@@ -22,7 +36,7 @@ const Cart = ({ toggleCart, cartList, deleteProductFromCart }) => {
         <p>Cart is empty</p>
       )}
 
-      <p>Total: 0.00</p>
+      <p>Total: {total} $</p>
       <button>Checkout</button>
       <button onClick={toggleCart}>Close</button>
     </div>

@@ -5,8 +5,6 @@ const Card = ({
   imgSrc,
   productName,
   price,
-  incrementProductsNumber,
-  decrementProductsNumber,
   addProductToCart,
   deleteProductFromCart,
 }) => {
@@ -54,11 +52,9 @@ const Card = ({
           onClick={() => {
             if (added) {
               setAdded(false);
-              decrementProductsNumber();
               deleteProductFromCart(id);
             } else {
               setAdded(true);
-              incrementProductsNumber();
               addProductToCart(id, productName, imgSrc, price, quantity);
             }
           }}
@@ -70,7 +66,6 @@ const Card = ({
           onClick={() => {
             if (added) {
               setAdded(false);
-              decrementProductsNumber();
               deleteProductFromCart(id);
             }
           }}
