@@ -44,7 +44,7 @@ header {
 ul.nav-links {
   list-style: none;
   display: flex;
-  gap: 16px;
+  gap: 32px;
   align-items: center;
   cursor: pointer;
 }
@@ -99,6 +99,7 @@ ul.nav-links img {
   gap: 32px;
   font-family: 'Montserrat';
   color: var(--Primary-Color);
+  padding-block: 32px;
 }
 
 .Home img {
@@ -159,7 +160,7 @@ footer a:is(:hover, :focus) {
 
 .card {
   width: 250px;
-  height: 380px;
+  height: 420px;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -169,6 +170,7 @@ footer a:is(:hover, :focus) {
   border-radius: 12px;
   background-color: var(--Secondary-Color);
   color: var(--Primary-Color);
+  font-family: 'Open sans';
 }
 
 .card img {
@@ -179,7 +181,7 @@ footer a:is(:hover, :focus) {
 }
 
 .card h3 {
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .card .text {
@@ -217,6 +219,7 @@ footer a:is(:hover, :focus) {
   background-color: var(--Accent-Color-1);
   color: var(--Primary-Color);
   border: 0;
+  font-family: inherit;
 }
 
 .add-to-cart:is(:hover, :focus) {
@@ -233,7 +236,8 @@ main {
 .cards-container {
   display: grid;
   grid-template-columns: repeat(4, minmax(250px, 1fr));
-  gap: 16px;
+  gap: 32px;
+  padding-block: 32px;
 }
 
 /*--------------------------*/
@@ -245,6 +249,7 @@ main {
   justify-content: center;
   align-items: center;
   color: var(--Primary-Color);
+  font-family: 'Open sans';
 }
 .social-links {
   display: flex;
@@ -276,7 +281,7 @@ main {
   height: 100vh;
   top: 0;
   right: 0;
-  background-color: rgb(180, 179, 179);
+  background-color: var(--light-grey);
   padding: 16px 48px;
   overflow: scroll;
   display: flex;
@@ -285,11 +290,26 @@ main {
   width: 450px;
   background-color: var(--light-grey);
   color: var(--Primary-Color);
+  font-family: 'Open sans';
+}
+
+.shopping-cart::-webkit-scrollbar {
+  display: none;
+}
+
+.shopping-cart {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.shopping-cart h2 {
+  font-family: 'Montserrat';
+  font-size: 2rem;
 }
 
 .shopping-list {
   list-style: none;
-  border: 2px solid black;
+  border: 2px solid var(--Primary-Color);
   padding: 8px;
   margin-block: 16px;
 }
@@ -300,7 +320,7 @@ main {
   margin-block: 16px;
   position: relative;
   border: 2px solid var(--Primary-Color);
-  padding: 8px;
+  padding: 16px;
   background-color: var(--Secondary-Color);
   height: 150px;
 }
@@ -317,7 +337,8 @@ main {
   color: var(--Secondary-Color);
   background-color: var(--Accent-Color-2);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
+  padding: 4px;
 }
 
 .shopping-cart .empty {
@@ -338,6 +359,7 @@ main {
   border: 0;
   padding: 8px;
   cursor: pointer;
+  font-family: inherit;
 }
 
 .shopping-cart button:is(:hover, :focus) {
