@@ -25,8 +25,6 @@ const Cart = ({
     );
   });
 
-  console.log('total:', total);
-
   return (
     <div className="shopping-cart">
       <h2>Your Shopping Cart</h2>
