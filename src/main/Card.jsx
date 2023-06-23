@@ -40,6 +40,7 @@ const Card = ({
         <input
           type="text"
           id="product_quantity"
+          data-testid="product_quantity"
           value={quantity}
           onChange={changeQuantity}
         />

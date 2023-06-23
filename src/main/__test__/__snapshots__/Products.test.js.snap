@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component Card renders product info correctly 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="product img"
+      src="img.jpg"
+    />
+    <div
+      class="text"
+    >
+      <h3>
+        product
+      </h3>
+      <p>
+        10
+        $
+      </p>
+    </div>
+    <div
+      class="quantity"
+    >
+      <button
+        class="decrement"
+      >
+        -
+      </button>
+      <input
+        data-testid="product_quantity"
+        id="product_quantity"
+        type="text"
+        value="0"
+      />
+      <button
+        class="increment"
+      >
+        +
+      </button>
+    </div>
+    <button
+      class="add-to-cart"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+`;
