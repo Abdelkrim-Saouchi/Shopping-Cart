@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage correctly 1`] = `
+<div>
+  <main
+    class="contacts container"
+  >
+    <div
+      class="social-links"
+    >
+      <a
+        href="https://www.facebook.com/"
+      >
+        <img
+          alt="facebook icon"
+          src="facebook.png"
+        />
+      </a>
+      <a
+        href="https://twitter.com/"
+      >
+        <img
+          alt="twitter icon"
+          src="twitter.png"
+        />
+      </a>
+      <a
+        href="https://github.com/"
+      >
+        <img
+          alt="github icon"
+          src="github.png"
+        />
+      </a>
+    </div>
+    <div
+      class="address"
+    >
+      <h3>
+        1044 Street, Bordj Bou Arreridj. Algeria
+      </h3>
+    </div>
+  </main>
+</div>
+`;

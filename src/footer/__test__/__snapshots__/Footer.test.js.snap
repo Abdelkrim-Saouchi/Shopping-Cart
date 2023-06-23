@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage correctly 1`] = `
+<div>
+  <footer
+    class="container"
+  >
+    Copyright ©
+    <a
+      href="https://github.com/karim-saou"
+    >
+       Krimothiazine
+    </a>
+  </footer>
+</div>
+`;
