@@ -1,19 +1,10 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import Header from '../Header';
 import { BrowserRouter } from 'react-router-dom';
 import CartIcon from '../CartIcon';
-
-// jest.mock('../CartIcon', () => ({ productsNumber, toggleCart }) => {
-//   return (
-//     <>
-//       <div>{productsNumber}</div>
-//       <div onClick={toggleCart}></div>
-//     </>
-//   );
-// });
 
 const renderWithRouter = (ui, { route = '/' } = {}) => {
   window.history.pushState({}, 'Test page', route);
@@ -45,4 +36,24 @@ test('Cart icon renders in the page', () => {
   renderWithRouter(<CartIcon />);
   const cartIcon = screen.getByRole('img', { name: /cart icon/i });
   expect(cartIcon).toBeInTheDocument();
+});
+
+test('Cart icon renders correct products number', () => {
+  const productsNumber = 1;
+  renderWithRouter(<CartIcon productsNumber={productsNumber} />);
+  const counter = screen.getByTestId('products-counter');
+  expect(counter.textContent).toBe('1');
+});
+
+test('Cart icon calls toggleCart function', async () => {
+  const mockToggleCart = jest.fn();
+  const user = userEvent.setup();
+
+  renderWithRouter(<CartIcon toggleCart={mockToggleCart} />);
+  const icon = screen.getByRole('img', {
+    name: /cart icon/i,
+  });
+
+  await user.click(icon);
+  expect(mockToggleCart).toHaveBeenCalledTimes(1);
 });

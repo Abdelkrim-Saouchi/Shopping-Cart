@@ -5,7 +5,9 @@ const CartIcon = ({ productsNumber, toggleCart }) => {
     <div className="cart-icon-wrapper" onClick={toggleCart}>
       <img src={cartIcon} alt="cart icon" />
       {productsNumber > 0 ? (
-        <span className="products-counter">{productsNumber}</span>
+        <span className="products-counter" data-testid="products-counter">
+          {productsNumber}
+        </span>
       ) : null}
     </div>
   );
