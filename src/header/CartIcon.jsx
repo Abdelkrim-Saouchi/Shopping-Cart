@@ -1,6 +1,10 @@
+import { useContext } from 'react';
+import { HeaderContext } from './HeaderContext';
 import cartIcon from '../assets/cart-4-svgrepo-com.svg';
 
-const CartIcon = ({ productsNumber, toggleCart }) => {
+const CartIcon = () => {
+  const { productsNumber, toggleCart } = useContext(HeaderContext);
+
   return (
     <div
       className="cart-icon-wrapper"

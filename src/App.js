@@ -9,6 +9,7 @@ import NotFound from './main/NotFound';
 import Products from './main/Products';
 import { Routes, Route } from 'react-router-dom';
 import Cart from './main/Cart';
+import { HeaderContext } from './header/HeaderContext';
 
 function App() {
   const [showed, setShowed] = useState(false);
@@ -44,7 +45,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header productsNumber={productsNumber} toggleCart={toggleCart} />
+      <HeaderContext.Provider value={{ productsNumber, toggleCart }}>
+        <Header />
+      </HeaderContext.Provider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route

@@ -4,6 +4,7 @@ import '@testing-library/jest-dom';
 import Header from '../Header';
 import { BrowserRouter } from 'react-router-dom';
 import CartIcon from '../CartIcon';
+import { HeaderContext } from '../HeaderContext';
 
 const renderWithRouter = (ui, { route = '/' } = {}) => {
   window.history.pushState({}, 'Test page', route);
@@ -13,14 +14,20 @@ const renderWithRouter = (ui, { route = '/' } = {}) => {
   };
 };
 
-const mockProps = {
-  productsNumber: 2,
-  toggleCart: jest.fn(),
+let providerProps = {
+  value: { productsNumber: 2, toggleCart: jest.fn() },
+};
+
+const customRender = (ui, { providerProps, ...renderOptions }) => {
+  return render(
+    <HeaderContext.Provider {...providerProps}>{ui}</HeaderContext.Provider>,
+    renderOptions
+  );
 };
 
 describe('Header Component', () => {
   test('renders header with navigation links and cart icon', () => {
-    renderWithRouter(<Header {...mockProps} />);
+    renderWithRouter(<Header />);
     expect(screen.getByText('FutureStore')).toBeInTheDocument();
     expect(screen.getByText('Home')).toBeInTheDocument();
     expect(screen.getByText('Products')).toBeInTheDocument();
@@ -28,35 +35,31 @@ describe('Header Component', () => {
     expect(screen.getByTestId('cart-icon')).toBeInTheDocument();
     expect(screen.getByTestId('products-counter')).toBeInTheDocument();
   });
-
-  test('calls toggleCart when cart icon is clicked', () => {
-    renderWithRouter(<Header {...mockProps} />);
-
-    const cartIcon = screen.getByTestId('cart-icon');
-    fireEvent.click(cartIcon);
-
-    expect(mockProps.toggleCart).toHaveBeenCalled();
-  });
 });
 
 describe('CartIcon Component', () => {
   test('renders cart icon with products counter', () => {
-    renderWithRouter(<CartIcon {...mockProps} />);
+    customRender(<CartIcon />, { providerProps });
+
     expect(screen.getByRole('img', { name: /cart icon/i })).toBeInTheDocument();
     expect(screen.getByTestId('products-counter')).toHaveTextContent('2');
   });
 
-  test('calls toggleCart when cart icon wrapper is clicked', () => {
-    renderWithRouter(<CartIcon {...mockProps} />);
+  test('calls toggleCart when cart icon is clicked', () => {
+    customRender(<CartIcon />, { providerProps });
 
-    const cartIconWrapper = screen.getByTestId('cart-icon-wrapper');
-    fireEvent.click(cartIconWrapper);
+    const cartIcon = screen.getByTestId('cart-icon');
+    fireEvent.click(cartIcon);
 
-    expect(mockProps.toggleCart).toHaveBeenCalled();
+    expect(providerProps.value.toggleCart).toHaveBeenCalledTimes(1);
   });
 
   test('does not render products counter when productsNumber is 0', () => {
-    render(<CartIcon {...mockProps} productsNumber={0} />);
+    providerProps = Object.assign(
+      {},
+      { value: { productsNumber: 0, toggleCart: jest.fn() } }
+    );
+    customRender(<CartIcon />, { providerProps });
 
     expect(screen.queryByTestId('products-counter')).toBeNull();
   });
