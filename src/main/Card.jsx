@@ -1,13 +1,9 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { ProductsContext } from './ProductsContext';
 
-const Card = ({
-  id,
-  imgSrc,
-  productName,
-  price,
-  addProductToCart,
-  deleteProductFromCart,
-}) => {
+const Card = ({ id, imgSrc, productName, price }) => {
+  const { addProductToCart, deleteProductFromCart } =
+    useContext(ProductsContext);
   const [quantity, setQuantity] = useState(0);
   const [added, setAdded] = useState(false);
 

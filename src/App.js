@@ -10,6 +10,7 @@ import Products from './main/Products';
 import { Routes, Route } from 'react-router-dom';
 import Cart from './main/Cart';
 import { HeaderContext } from './header/HeaderContext';
+import { ProductsContext } from './main/ProductsContext';
 
 function App() {
   const [showed, setShowed] = useState(false);
@@ -48,21 +49,18 @@ function App() {
       <HeaderContext.Provider value={{ productsNumber, toggleCart }}>
         <Header />
       </HeaderContext.Provider>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/products"
-          element={
-            <Products
-              addProductToCart={addProductToCart}
-              deleteProductFromCart={deleteProductFromCart}
-            />
-          }
-        />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/fetch-error" element={<FetchFailed />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <ProductsContext.Provider
+        value={{ addProductToCart, deleteProductFromCart }}
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/fetch-error" element={<FetchFailed />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ProductsContext.Provider>
       {showed && (
         <Cart
           toggleCart={toggleCart}

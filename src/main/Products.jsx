@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Card from './Card';
 import { useNavigate } from 'react-router-dom';
 
-const Products = ({ addProductToCart, deleteProductFromCart }) => {
+const Products = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
@@ -29,8 +29,6 @@ const Products = ({ addProductToCart, deleteProductFromCart }) => {
             imgSrc={product.images[0]}
             productName={product.title}
             price={product.price}
-            addProductToCart={addProductToCart}
-            deleteProductFromCart={deleteProductFromCart}
           />
         ))}
       </div>

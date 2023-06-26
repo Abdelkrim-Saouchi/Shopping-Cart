@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Card from '../Card';
+import { ProductsContext } from '../ProductsContext';
 
 const renderWithRouter = (ui, { route = '/' } = {}) => {
   window.history.pushState({}, 'Test page', route);
@@ -12,14 +13,25 @@ const renderWithRouter = (ui, { route = '/' } = {}) => {
   };
 };
 
+let providerProps = {
+  value: { addProductToCart: jest.fn(), deleteProductFromCart: jest.fn() },
+};
+
+const customRender = (ui, { providerProps, ...renderOptions }) => {
+  return render(
+    <ProductsContext.Provider {...providerProps}>
+      {ui}
+    </ProductsContext.Provider>,
+    renderOptions
+  );
+};
+
 describe('Card Component', () => {
   const mockProps = {
     id: 1,
     imgSrc: 'img.jpg',
     productName: 'product',
     price: 10,
-    addProductToCart: jest.fn(),
-    deleteProductFromCart: jest.fn(),
   };
 
   beforeEach(() => {
@@ -52,13 +64,13 @@ describe('Card Component', () => {
   });
 
   test('calls addProductToCart when Add to Cart button is clicked with quantity > 0', () => {
-    renderWithRouter(<Card {...mockProps} />);
+    customRender(<Card {...mockProps} />, { providerProps });
     const incrementButton = screen.getByText('+');
     fireEvent.click(incrementButton);
     const addToCartButton = screen.getByText('Add to Cart');
     fireEvent.click(addToCartButton);
 
-    expect(mockProps.addProductToCart).toHaveBeenCalledWith(
+    expect(providerProps.value.addProductToCart).toHaveBeenCalledWith(
       1,
       'product',
       'img.jpg',
@@ -68,7 +80,7 @@ describe('Card Component', () => {
   });
 
   test('calls deleteProductFromCart when Add to Cart button is clicked with quantity > 0 and already added', () => {
-    renderWithRouter(<Card {...mockProps} />);
+    customRender(<Card {...mockProps} />, { providerProps });
     const incrementButton = screen.getByText('+');
     fireEvent.click(incrementButton);
 
@@ -78,11 +90,11 @@ describe('Card Component', () => {
     const addedToCartButton = screen.getByText('Added to Cart');
     fireEvent.click(addedToCartButton);
 
-    expect(mockProps.deleteProductFromCart).toHaveBeenCalledWith(1);
+    expect(providerProps.value.deleteProductFromCart).toHaveBeenCalledWith(1);
   });
 
   test('calls deleteProductFromCart when Add to Cart button is clicked with quantity = 0 and already added', () => {
-    renderWithRouter(<Card {...mockProps} />);
+    customRender(<Card {...mockProps} />, { providerProps });
 
     const incrementButton = screen.getByText('+');
     fireEvent.click(incrementButton);
@@ -96,18 +108,18 @@ describe('Card Component', () => {
     const addedToCartButton = screen.getByText('Added to Cart');
     fireEvent.click(addedToCartButton);
 
-    expect(mockProps.deleteProductFromCart).toHaveBeenCalledWith(1);
+    expect(providerProps.value.deleteProductFromCart).toHaveBeenCalledWith(1);
   });
 
   test('does not call addProductToCart or deleteProductFromCart when Add to Cart button is clicked with quantity = 0 and not added', () => {
-    renderWithRouter(<Card {...mockProps} />);
+    customRender(<Card {...mockProps} />, { providerProps });
     const addToCartButton = screen.getByText('Add to Cart');
     const quantityInput = screen.getByTestId('product_quantity');
 
     fireEvent.change(quantityInput, { target: { value: '0' } });
     fireEvent.click(addToCartButton);
 
-    expect(mockProps.addProductToCart).not.toHaveBeenCalled();
-    expect(mockProps.deleteProductFromCart).not.toHaveBeenCalled();
+    expect(providerProps.value.addProductToCart).not.toHaveBeenCalled();
+    expect(providerProps.value.deleteProductFromCart).not.toHaveBeenCalled();
   });
 });
