@@ -1,23 +1,8 @@
-import { useEffect, useState } from 'react';
 import Card from './Card';
-import { useNavigate } from 'react-router-dom';
+import { useData } from './useData';
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    fetch('https://dummyjson.com/products')
-      .then((res) => res.json())
-      .then((json) => {
-        const selectedProducts = json.products.slice(0, 20);
-        setProducts(selectedProducts);
-      })
-      .catch((error) => {
-        navigate('/fetch-error');
-        console.log(error);
-      });
-  }, [navigate]);
+  const products = useData('https://dummyjson.com/products');
 
   return (
     <main className="container">
