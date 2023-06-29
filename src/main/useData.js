@@ -6,7 +6,6 @@ const useData = (url) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log('runs');
     let ignore = false;
     if (url) {
       fetch(url)
