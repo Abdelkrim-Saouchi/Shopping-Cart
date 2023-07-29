@@ -1,0 +1,20 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--Primary-Color);
+  font-family: 'Open sans';
+}
+.socialLinks {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+.socialLinks img {
+  width: 50px;
+}
+
+.socialLinks img:is(:hover, :focus) {
+  scale: 1.1;
+}

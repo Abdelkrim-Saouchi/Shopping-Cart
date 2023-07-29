@@ -1,11 +1,12 @@
 import fbIcon from '../assets/facebook.png';
-import twitterIcon from '../assets/twitter.png';
 import githubIcon from '../assets/github.png';
+import twitterIcon from '../assets/twitter.png';
+import styles from './Contact.module.css';
 
 const Contact = () => {
   return (
-    <main className="contacts container">
-      <div className="social-links">
+    <main className={'container ' + styles.contacts}>
+      <div className={styles.socialLinks}>
         <a href="https://www.facebook.com/">
           <img src={fbIcon} alt="facebook icon" />
         </a>
@@ -16,7 +17,7 @@ const Contact = () => {
           <img src={githubIcon} alt="github icon" />
         </a>
       </div>
-      <div className="address">
+      <div>
         <h3>1044 Street, Bordj Bou Arreridj. Algeria</h3>
       </div>
     </main>
