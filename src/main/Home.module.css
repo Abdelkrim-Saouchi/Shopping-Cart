@@ -1,0 +1,41 @@
+.Home {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-family: 'Montserrat';
+  color: var(--Primary-Color);
+  padding-block: 32px;
+}
+
+.Home img {
+  width: 50%;
+  display: block;
+  border-radius: 12px;
+}
+
+.heroSectionText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Open sans';
+}
+
+.heroSectionText p {
+  opacity: 0.7;
+}
+
+.heroSectionText button {
+  align-self: center;
+  padding: 16px;
+  border-radius: 12px;
+  border: 0;
+  outline: transparent;
+  font-size: inherit;
+  cursor: pointer;
+  background-color: var(--Accent-Color-1);
+  color: var(--Primary-Color);
+}
+
+.heroSectionText button:is(:hover, :focus) {
+  opacity: 0.8;
+}

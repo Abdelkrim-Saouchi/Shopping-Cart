@@ -1,13 +1,14 @@
 // https://www.freepik.com/free-photo/cheerful-satisfied-customer-holding-shopping-bags_8132438.htm
 import { useNavigate } from 'react-router-dom';
 import heroImg from '../assets/cheerful-satisfied-customer-holding-shopping-bags.jpg';
+import styles from './Home.module.css';
 
 const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <main className="Home container">
-      <div className="hero-section-text">
+    <main className={'container ' + styles.Home}>
+      <div className={styles.heroSectionText}>
         <h2>
           Welcome to FutureStore - Your One-Stop Destination for Fashion and
           Technology!

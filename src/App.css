@@ -93,7 +93,7 @@ ul.nav-links img {
 /*----------------------*/
 
 /* -----Home -----------*/
-.Home {
+/* .Home {
   display: flex;
   justify-content: center;
   gap: 32px;
@@ -133,7 +133,7 @@ ul.nav-links img {
 
 .hero-section-text button:is(:hover, :focus) {
   opacity: 0.8;
-}
+} */
 
 /*----------------------*/
 
