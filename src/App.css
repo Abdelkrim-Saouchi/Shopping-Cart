@@ -138,7 +138,7 @@ ul.nav-links img {
 /*----------------------*/
 
 /*------Footer----------*/
-footer {
+/* footer {
   text-align: center;
   background-color: var(--Primary-Color);
   color: var(--Secondary-Color);
@@ -152,7 +152,7 @@ footer a {
 footer a:is(:hover, :focus) {
   text-decoration: underline;
   color: var(--Accent-Color-1);
-}
+} */
 
 /*-----------------------*/
 

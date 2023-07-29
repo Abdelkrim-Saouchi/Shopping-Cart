@@ -1,0 +1,15 @@
+.footer {
+  text-align: center;
+  background-color: var(--Primary-Color);
+  color: var(--Secondary-Color);
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer a:is(:hover, :focus) {
+  text-decoration: underline;
+  color: var(--Accent-Color-1);
+}
