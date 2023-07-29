@@ -1,0 +1,24 @@
+.cartIconWrapper {
+  position: relative;
+  background-color: var(--Secondary-Color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartIconWrapper:is(:hover, :focus) {
+  background-color: var(--Accent-Color-1);
+}
+
+.productsCounter {
+  background-color: var(--Accent-Color-2);
+  color: var(--Secondary-Color);
+  padding: 1px 2px;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
