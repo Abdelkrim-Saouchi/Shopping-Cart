@@ -229,7 +229,7 @@ footer a:is(:hover, :focus) {
 /*------------------------*/
 
 /*---------Products-----------*/
-main {
+/* main {
   background-color: var(--light-grey);
 }
 
@@ -238,7 +238,7 @@ main {
   grid-template-columns: repeat(4, minmax(250px, 1fr));
   gap: 32px;
   padding-block: 32px;
-}
+} */
 
 /*--------------------------*/
 
