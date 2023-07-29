@@ -1,0 +1,89 @@
+.shoppingCart {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: var(--light-grey);
+  padding: 16px 48px;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 450px;
+  background-color: var(--light-grey);
+  color: var(--Primary-Color);
+  font-family: 'Open sans';
+}
+
+.shoppingCart::-webkit-scrollbar {
+  display: none;
+}
+
+.shoppingCart {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.shoppingCart h2 {
+  font-family: 'Montserrat';
+  font-size: 2rem;
+}
+
+.shoppingList {
+  list-style: none;
+  border: 2px solid var(--Primary-Color);
+  padding: 8px;
+  margin-block: 16px;
+}
+
+.shoppingList li {
+  display: flex;
+  gap: 8px;
+  margin-block: 16px;
+  position: relative;
+  border: 2px solid var(--Primary-Color);
+  padding: 16px;
+  background-color: var(--Secondary-Color);
+  height: 150px;
+}
+
+.shoppingList img {
+  width: 40%;
+  height: 80%;
+}
+
+.shoppingList li span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--Secondary-Color);
+  background-color: var(--Accent-Color-2);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+.empty {
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--Primary-Color);
+  padding: 8px;
+  text-align: center;
+  margin-block: 16px;
+}
+
+.shoppingCart button {
+  width: 120px;
+  font-size: inherit;
+  margin-top: 16px;
+  background-color: var(--Accent-Color-1);
+  color: inherit;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.shoppingCart button:is(:hover, :focus) {
+  scale: 1.1;
+}

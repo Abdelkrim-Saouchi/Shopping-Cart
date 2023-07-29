@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import styles from './Cart.module.css';
 
 const Cart = ({
   toggleCart,
@@ -26,12 +27,12 @@ const Cart = ({
   });
 
   return (
-    <div className="shopping-cart">
+    <div className={styles.shoppingCart}>
       <h2>Your Shopping Cart</h2>
       {cartList.length > 0 ? (
-        <ul className="shopping-list">{shoppingList}</ul>
+        <ul className={styles.shoppingList}>{shoppingList}</ul>
       ) : (
-        <p className="empty">Cart is empty</p>
+        <p className={styles.empty}>Cart is empty</p>
       )}
 
       <p>Total: {total} $</p>
