@@ -267,11 +267,11 @@ footer a:is(:hover, :focus) {
 /*-------------------------*/
 
 /* ------NotFound ---------*/
-.NotFound {
+/* .NotFound {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /*------------------------*/
 

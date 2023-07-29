@@ -1,6 +1,8 @@
+import styles from './NotFound.module.css';
+
 const NotFound = ({ errorText }) => {
   return (
-    <main className="container NotFound">
+    <main className={'container ' + styles.NotFound}>
       <h2>404 Not Found</h2>
     </main>
   );
