@@ -12,4 +12,4 @@ The Odin Project Curriculum's project.
 
 ### Demo
 
-live Demo [here](https://karim-saou.github.io/Shopping-Cart/);
+live Demo [here](https://abdelkrim-saouchi.github.io/Shopping-Cart/);
