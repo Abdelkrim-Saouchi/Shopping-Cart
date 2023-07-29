@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import CartIcon from './CartIcon';
+import styles from './Header.module.css';
+
 const Header = () => {
   return (
-    <header className="container">
+    <header className={'container ' + styles.header}>
       <h1>FutureStore</h1>
-      <ul className="nav-links">
+      <ul className={styles.navLinks}>
         <li>
           <Link to="/">Home</Link>
         </li>

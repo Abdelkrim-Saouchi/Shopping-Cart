@@ -29,7 +29,7 @@
 }
 
 /* ---- Header ------ */
-header {
+/* header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,7 +60,7 @@ ul.nav-links a:is(:hover, :focus) {
 
 ul.nav-links img {
   width: 30px;
-}
+} */
 
 /* ---------------------*/
 
