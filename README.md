@@ -8,6 +8,7 @@ The Odin Project Curriculum's project.
 2. React testing using Jest, Testing library and Jest-dom.
 3. Context API.
 4. Custom Hook.
+5. css modules.
 
 ### Demo
 
