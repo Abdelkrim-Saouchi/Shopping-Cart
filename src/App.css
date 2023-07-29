@@ -158,7 +158,7 @@ footer a:is(:hover, :focus) {
 
 /* -------Card -----------*/
 
-.card {
+/* .card {
   width: 250px;
   height: 420px;
   padding: 16px;
@@ -224,7 +224,7 @@ footer a:is(:hover, :focus) {
 
 .add-to-cart:is(:hover, :focus) {
   scale: 1.1;
-}
+} */
 
 /*------------------------*/
 

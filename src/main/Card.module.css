@@ -1,0 +1,67 @@
+.card {
+  width: 250px;
+  height: 420px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size: inherit;
+  border-radius: 12px;
+  background-color: var(--Secondary-Color);
+  color: var(--Primary-Color);
+  font-family: 'Open sans';
+}
+
+.card img {
+  width: 100%;
+  height: 50%;
+  display: block;
+  border-radius: 12px;
+}
+
+.card h3 {
+  font-size: 1rem;
+}
+
+.text {
+  margin-top: auto;
+  text-align: center;
+}
+
+.card p {
+  opacity: 0.7;
+}
+
+.quantity {
+  display: flex;
+  height: 10%;
+  justify-content: center;
+}
+
+.quantity input {
+  width: 40%;
+  text-align: center;
+  color: inherit;
+}
+
+.quantity button {
+  height: 100%;
+  width: 15%;
+  padding: 5px;
+}
+
+.card button {
+  margin-top: auto;
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--Accent-Color-1);
+  color: var(--Primary-Color);
+  border: 0;
+  font-family: inherit;
+}
+
+.addToCart:is(:hover, :focus) {
+  scale: 1.1;
+}

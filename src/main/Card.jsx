@@ -1,4 +1,5 @@
-import { useState, useContext } from 'react';
+import { useContext, useState } from 'react';
+import styles from './Card.module.css';
 import { ProductsContext } from './ProductsContext';
 
 const Card = ({ id, imgSrc, productName, price }) => {
@@ -23,13 +24,13 @@ const Card = ({ id, imgSrc, productName, price }) => {
   };
 
   return (
-    <div className="card">
+    <div className={styles.card}>
       <img src={imgSrc} alt="product img" />
-      <div className="text">
+      <div className={styles.text}>
         <h3>{productName}</h3>
         <p>{price}$</p>
       </div>
-      <div className="quantity">
+      <div className={styles.quantity}>
         <button className="decrement" onClick={decrementQuantity}>
           -
         </button>
@@ -46,7 +47,7 @@ const Card = ({ id, imgSrc, productName, price }) => {
       </div>
       {quantity > 0 ? (
         <button
-          className="add-to-cart"
+          className={styles.addToCart}
           onClick={() => {
             if (added) {
               setAdded(false);
@@ -61,7 +62,7 @@ const Card = ({ id, imgSrc, productName, price }) => {
         </button>
       ) : (
         <button
-          className="add-to-cart"
+          className={styles.addToCart}
           onClick={() => {
             if (added) {
               setAdded(false);
