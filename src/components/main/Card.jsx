@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
+import { ProductsContext } from '../../contexts/ProductsContext';
 import styles from './Card.module.css';
-import { ProductsContext } from './ProductsContext';
 
 const Card = ({ id, imgSrc, productName, price }) => {
   const { addProductToCart, deleteProductFromCart } =

@@ -1,7 +1,7 @@
 import { useLoaderData } from 'react-router-dom';
-import Card from './Card';
+import { getProducts } from '../Api/getProducts';
+import Card from '../components/main/Card';
 import styles from './Products.module.css';
-import { getProducts } from './getProducts';
 
 export async function loader() {
   return await getProducts();

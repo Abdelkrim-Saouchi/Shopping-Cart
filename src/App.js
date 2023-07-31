@@ -1,11 +1,11 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
-import Layout from './Layout';
-import Contact from './main/Contact';
-import FetchFailed from './main/FetchFailed';
-import Home from './main/Home';
-import NotFound from './main/NotFound';
-import Products, { loader as productsLoader } from './main/Products';
+import Layout from './components/Layout';
+import FetchFailed from './components/main/FetchFailed';
+import NotFound from './components/main/NotFound';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Products, { loader as productsLoader } from './pages/Products';
 
 const router = createBrowserRouter([
   {

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import cartIcon from '../assets/cart-4-svgrepo-com.svg';
+import cartIcon from '../../assets/cart-4-svgrepo-com.svg';
+import { HeaderContext } from '../../contexts/HeaderContext';
 import styles from './CartIcon.module.css';
-import { HeaderContext } from './HeaderContext';
 
 const CartIcon = () => {
   const { productsNumber, toggleCart } = useContext(HeaderContext);

@@ -1,10 +1,10 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Header from '../Header';
+import { fireEvent, render, screen } from '@testing-library/react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { HeaderContext } from '../../../contexts/HeaderContext';
 import CartIcon from '../CartIcon';
-import { HeaderContext } from '../HeaderContext';
+import Header from '../Header';
 
 const renderWithRouter = (ui, { route = '/' } = {}) => {
   window.history.pushState({}, 'Test page', route);

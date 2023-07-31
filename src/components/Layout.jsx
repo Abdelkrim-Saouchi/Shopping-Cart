@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import './App.css';
+import { HeaderContext } from '../contexts/HeaderContext';
+import { ProductsContext } from '../contexts/ProductsContext';
 import Footer from './footer/Footer';
 import Header from './header/Header';
-import { HeaderContext } from './header/HeaderContext';
 import Cart from './main/Cart';
-import { ProductsContext } from './main/ProductsContext';
 
 const Layout = () => {
   const [showed, setShowed] = useState(false);
