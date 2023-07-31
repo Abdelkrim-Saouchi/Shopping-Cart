@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout';
 import FetchFailed from './components/main/FetchFailed';
@@ -7,7 +7,7 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Products, { loader as productsLoader } from './pages/Products';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     element: <Layout />,
     errorElement: <NotFound />,
