@@ -1,38 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders homepage 1`] = `
-<div>
-  <main
-    class="Home container"
-  >
-    <div
-      class="hero-section-text"
-    >
-      <h2>
-        Welcome to FutureStore - Your One-Stop Destination for Fashion and Technology!
-      </h2>
-      <p>
-        At FutureStore, we believe that shopping should be a delightful experience, and that's why we strive to provide you with the best products, exceptional customer service, and a seamless shopping experience. Browse our diverse range of products, find what you love, and let us take care of the rest.
-      </p>
-      <button>
-        Explore Now
-      </button>
-    </div>
-    <img
-      alt="hero section img"
-      src="cheerful-satisfied-customer-holding-shopping-bags.jpg"
-    />
-  </main>
-</div>
-`;
-
 exports[`renders homepage correctly 1`] = `
 <div>
   <main
-    class="Home container"
+    class="container Home"
   >
     <div
-      class="hero-section-text"
+      class="heroSectionText"
     >
       <h2>
         Welcome to FutureStore - Your One-Stop Destination for Fashion and Technology!
@@ -41,7 +15,11 @@ exports[`renders homepage correctly 1`] = `
         At FutureStore, we believe that shopping should be a delightful experience, and that's why we strive to provide you with the best products, exceptional customer service, and a seamless shopping experience. Browse our diverse range of products, find what you love, and let us take care of the rest.
       </p>
       <button>
-        Explore Now
+        <a
+          href="/products"
+        >
+          Explore Now
+        </a>
       </button>
     </div>
     <img

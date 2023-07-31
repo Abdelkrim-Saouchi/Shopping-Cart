@@ -3,10 +3,10 @@
 exports[`renders homepage correctly 1`] = `
 <div>
   <main
-    class="contacts container"
+    class="container contacts"
   >
     <div
-      class="social-links"
+      class="socialLinks"
     >
       <a
         href="https://www.facebook.com/"
@@ -33,9 +33,7 @@ exports[`renders homepage correctly 1`] = `
         />
       </a>
     </div>
-    <div
-      class="address"
-    >
+    <div>
       <h3>
         1044 Street, Bordj Bou Arreridj. Algeria
       </h3>
