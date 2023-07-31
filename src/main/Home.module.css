@@ -36,6 +36,12 @@
   color: var(--Primary-Color);
 }
 
+.heroSectionText a {
+  text-decoration: none;
+  font-size: inherit;
+  color: inherit;
+}
+
 .heroSectionText button:is(:hover, :focus) {
   opacity: 0.8;
 }

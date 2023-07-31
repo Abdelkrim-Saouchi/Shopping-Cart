@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import Layout from './Layout';
 import Contact from './main/Contact';
@@ -7,21 +7,35 @@ import Home from './main/Home';
 import NotFound from './main/NotFound';
 import Products from './main/Products';
 
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/products',
+        element: <Products />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
+      },
+      {
+        path: '/fetch-error',
+        element: <FetchFailed />,
+      },
+    ],
+  },
+]);
+
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/fetch-error" element={<FetchFailed />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </div>
   );
 }
