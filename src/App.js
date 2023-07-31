@@ -5,7 +5,7 @@ import Contact from './main/Contact';
 import FetchFailed from './main/FetchFailed';
 import Home from './main/Home';
 import NotFound from './main/NotFound';
-import Products from './main/Products';
+import Products, { loader as productsLoader } from './main/Products';
 
 const router = createBrowserRouter([
   {
@@ -19,14 +19,12 @@ const router = createBrowserRouter([
       {
         path: '/products',
         element: <Products />,
+        errorElement: <FetchFailed />,
+        loader: productsLoader,
       },
       {
         path: '/contact',
         element: <Contact />,
-      },
-      {
-        path: '/fetch-error',
-        element: <FetchFailed />,
       },
     ],
   },

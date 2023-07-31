@@ -1,9 +1,14 @@
+import { useLoaderData } from 'react-router-dom';
 import Card from './Card';
 import styles from './Products.module.css';
-import { useData } from './useData';
+import { getProducts } from './getProducts';
+
+export async function loader() {
+  return await getProducts();
+}
 
 const Products = () => {
-  const products = useData('https://dummyjson.com/products');
+  const products = useLoaderData();
 
   return (
     <main className={'container ' + styles.main}>
