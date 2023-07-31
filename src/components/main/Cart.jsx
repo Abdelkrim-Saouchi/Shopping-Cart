@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import styles from './Cart.module.css';
 
 const Cart = ({
@@ -8,9 +7,8 @@ const Cart = ({
   total,
   calculateTotal,
 }) => {
-  useEffect(() => {
-    calculateTotal();
-  }, [cartList, total]);
+  // calculate total after every render or re-render
+  calculateTotal();
 
   const shoppingList = cartList.map((item) => {
     return (
