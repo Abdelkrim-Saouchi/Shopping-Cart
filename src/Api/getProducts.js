@@ -6,7 +6,6 @@ export async function getProducts() {
     }
     const json = await res.json();
     const selectedProducts = json.products.slice(0, 20);
-    console.log(selectedProducts);
     return selectedProducts;
   } catch (error) {
     throw new Error(error);

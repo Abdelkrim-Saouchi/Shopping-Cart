@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { HeaderContext } from '../contexts/HeaderContext';
 import { ProductsContext } from '../contexts/ProductsContext';
@@ -29,14 +29,14 @@ const Layout = () => {
     setCartList(newCartList);
   };
 
-  const calculateTotal = () => {
+  const calculateTotal = useCallback(() => {
     const prices = cartList.map((item) => item.price * item.quantity);
     if (prices.length < 1) return setTotal(0);
     const sum = prices.reduce(
       (accumulator, currentValue) => accumulator + currentValue
     );
     setTotal(sum);
-  };
+  }, [cartList]);
 
   return (
     <>
