@@ -1,10 +1,13 @@
 .cartIconWrapper {
+  outline: transparent;
+  border: transparent;
   position: relative;
   background-color: var(--Secondary-Color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .cartIconWrapper:is(:hover, :focus) {

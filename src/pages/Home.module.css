@@ -24,24 +24,19 @@
   opacity: 0.7;
 }
 
-.heroSectionText button {
+.heroSectionText a {
   align-self: center;
   padding: 16px;
   border-radius: 12px;
   border: 0;
   outline: transparent;
   font-size: inherit;
+  text-decoration: none;
   cursor: pointer;
   background-color: var(--Accent-Color-1);
   color: var(--Primary-Color);
 }
 
-.heroSectionText a {
-  text-decoration: none;
-  font-size: inherit;
-  color: inherit;
-}
-
-.heroSectionText button:is(:hover, :focus) {
+.heroSectionText a:is(:hover, :focus) {
   opacity: 0.8;
 }

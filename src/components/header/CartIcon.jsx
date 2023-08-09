@@ -7,7 +7,7 @@ const CartIcon = () => {
   const { productsNumber, toggleCart } = useContext(HeaderContext);
 
   return (
-    <div
+    <button
       className={styles.cartIconWrapper}
       data-testid="cart-icon-wrapper"
       onClick={toggleCart}
@@ -18,7 +18,7 @@ const CartIcon = () => {
           {productsNumber}
         </span>
       ) : null}
-    </div>
+    </button>
   );
 };
 

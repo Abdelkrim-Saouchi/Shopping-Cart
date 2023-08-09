@@ -18,11 +18,9 @@ const Home = () => {
           experience. Browse our diverse range of products, find what you love,
           and let us take care of the rest.
         </p>
-        <button>
-          <Link to="/products">Explore Now</Link>
-        </button>
+        <Link to="/products">Explore Now</Link>
       </div>
-      <img src={heroImg} alt="hero section img" />
+      <img src={heroImg} alt="" />
     </main>
   );
 };

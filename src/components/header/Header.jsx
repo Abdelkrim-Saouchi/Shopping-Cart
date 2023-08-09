@@ -6,20 +6,22 @@ const Header = () => {
   return (
     <header className={'container ' + styles.header}>
       <h1>FutureStore</h1>
-      <ul className={styles.navLinks}>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/products">Products</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li>
-          <CartIcon />
-        </li>
-      </ul>
+      <nav>
+        <ul className={styles.navLinks}>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/products">Products</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li>
+            <CartIcon />
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
