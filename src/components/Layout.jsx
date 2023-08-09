@@ -7,7 +7,7 @@ import Header from './header/Header';
 import Cart from './main/Cart';
 
 const Layout = () => {
-  const [showed, setShowed] = useState(false);
+  const [hidden, setShowed] = useState(true);
   const [cartList, setCartList] = useState([]);
   const [productsNumber, setProductsNumber] = useState(0);
   const [total, setTotal] = useState(0);
@@ -17,7 +17,7 @@ const Layout = () => {
   }, [cartList, productsNumber]);
 
   const toggleCart = () => {
-    setShowed(!showed);
+    setShowed(!hidden);
   };
 
   const addProductToCart = (id, name, img, price, quantity) => {
@@ -48,15 +48,16 @@ const Layout = () => {
       >
         <Outlet />
       </ProductsContext.Provider>
-      {showed && (
-        <Cart
-          toggleCart={toggleCart}
-          cartList={cartList}
-          deleteProductFromCart={deleteProductFromCart}
-          total={total}
-          calculateTotal={calculateTotal}
-        />
-      )}
+
+      <Cart
+        toggleCart={toggleCart}
+        hidden={hidden}
+        cartList={cartList}
+        deleteProductFromCart={deleteProductFromCart}
+        total={total}
+        calculateTotal={calculateTotal}
+      />
+
       <Footer />
     </>
   );

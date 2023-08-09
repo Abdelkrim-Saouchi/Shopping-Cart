@@ -3,6 +3,7 @@ import styles from './Cart.module.css';
 
 const Cart = ({
   toggleCart,
+  hidden,
   cartList,
   deleteProductFromCart,
   total,
@@ -28,7 +29,11 @@ const Cart = ({
   });
 
   return (
-    <div className={styles.shoppingCart}>
+    <div
+      className={
+        hidden ? styles.shoppingCart + ' ' + styles.hidden : styles.shoppingCart
+      }
+    >
       <h2>Your Shopping Cart</h2>
       {cartList.length > 0 ? (
         <ul className={styles.shoppingList}>{shoppingList}</ul>

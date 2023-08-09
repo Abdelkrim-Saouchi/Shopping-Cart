@@ -13,6 +13,10 @@
   background-color: var(--light-grey);
   color: var(--Primary-Color);
   font-family: 'Open sans';
+  opacity: 1;
+  pointer-events: all;
+  transform-origin: right;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .shoppingCart::-webkit-scrollbar {
@@ -27,6 +31,12 @@
 .shoppingCart h2 {
   font-family: 'Montserrat';
   font-size: 2rem;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
 }
 
 .shoppingList {
