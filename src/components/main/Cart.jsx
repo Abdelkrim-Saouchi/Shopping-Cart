@@ -17,8 +17,14 @@ const Cart = ({
   const shoppingList = cartList.map((item) => {
     return (
       <li key={item.id}>
-        <span onClick={() => deleteProductFromCart(item.id)}>X</span>
-        <img src={item.img} alt="product img" />
+        <button
+          className={styles.remove}
+          onClick={() => deleteProductFromCart(item.id)}
+          aria-label="remove product from cart"
+        >
+          X
+        </button>
+        <img src={item.img} alt="product" />
         <div className="text">
           <p>{item.name}</p>
           <p>{item.price} $</p>
