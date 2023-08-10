@@ -10,9 +10,10 @@ const CartIcon = () => {
     <button
       className={styles.cartIconWrapper}
       data-testid="cart-icon-wrapper"
+      aria-label="Open Close Cart"
       onClick={toggleCart}
     >
-      <img src={cartIcon} alt="cart icon" data-testid="cart-icon" />
+      <img src={cartIcon} alt="" data-testid="cart-icon" />
       {productsNumber > 0 ? (
         <span className={styles.productsCounter} data-testid="products-counter">
           {productsNumber}
