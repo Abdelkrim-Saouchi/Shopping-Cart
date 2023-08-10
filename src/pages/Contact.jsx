@@ -8,13 +8,13 @@ const Contact = () => {
     <main className={'container ' + styles.contacts}>
       <div className={styles.socialLinks}>
         <a href="https://www.facebook.com/">
-          <img src={fbIcon} alt="facebook icon" />
+          <img src={fbIcon} alt="facebook" />
         </a>
         <a href="https://twitter.com/">
-          <img src={twitterIcon} alt="twitter icon" />
+          <img src={twitterIcon} alt="twitter" />
         </a>
         <a href="https://github.com/">
-          <img src={githubIcon} alt="github icon" />
+          <img src={githubIcon} alt="github" />
         </a>
       </div>
       <div>
