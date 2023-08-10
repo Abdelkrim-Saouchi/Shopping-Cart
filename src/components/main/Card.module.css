@@ -39,6 +39,10 @@
   justify-content: center;
 }
 
+.quantity span {
+  display: none;
+}
+
 .quantity input {
   width: 40%;
   text-align: center;

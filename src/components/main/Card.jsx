@@ -25,23 +25,33 @@ const Card = ({ id, imgSrc, productName, price }) => {
 
   return (
     <div className={styles.card}>
-      <img src={imgSrc} alt="product img" />
+      <img src={imgSrc} alt="product" />
       <div className={styles.text}>
         <h3>{productName}</h3>
         <p>{price}$</p>
       </div>
       <div className={styles.quantity}>
-        <button className="decrement" onClick={decrementQuantity}>
+        <button
+          className="decrement"
+          aria-label="decrement quantity"
+          onClick={decrementQuantity}
+        >
           -
         </button>
+        <span id={'label' + id}>Quantity:</span>
         <input
           type="text"
-          id="product_quantity"
+          id={'product_quantity' + id}
+          aria-labelledby={'label' + id}
           data-testid="product_quantity"
           value={quantity}
           onChange={changeQuantity}
         />
-        <button className="increment" onClick={incrementQuantity}>
+        <button
+          className="increment"
+          aria-label="increment quantity"
+          onClick={incrementQuantity}
+        >
           +
         </button>
       </div>
