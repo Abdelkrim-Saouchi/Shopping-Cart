@@ -12,7 +12,7 @@ exports[`renders homepage correctly 1`] = `
         href="https://www.facebook.com/"
       >
         <img
-          alt="facebook icon"
+          alt="facebook"
           src="facebook.png"
         />
       </a>
@@ -20,7 +20,7 @@ exports[`renders homepage correctly 1`] = `
         href="https://twitter.com/"
       >
         <img
-          alt="twitter icon"
+          alt="twitter"
           src="twitter.png"
         />
       </a>
@@ -28,7 +28,7 @@ exports[`renders homepage correctly 1`] = `
         href="https://github.com/"
       >
         <img
-          alt="github icon"
+          alt="github"
           src="github.png"
         />
       </a>

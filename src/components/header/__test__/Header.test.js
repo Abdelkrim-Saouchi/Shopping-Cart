@@ -41,7 +41,7 @@ describe('CartIcon Component', () => {
   test('renders cart icon with products counter', () => {
     customRender(<CartIcon />, { providerProps });
 
-    expect(screen.getByRole('img', { name: /cart icon/i })).toBeInTheDocument();
+    expect(screen.getByRole('img')).toBeInTheDocument();
     expect(screen.getByTestId('products-counter')).toHaveTextContent('2');
   });
 

@@ -6,7 +6,7 @@ exports[`Card Component Card renders product info correctly 1`] = `
     class="card"
   >
     <img
-      alt="product img"
+      alt="product"
       src="img.jpg"
     />
     <div
@@ -24,17 +24,25 @@ exports[`Card Component Card renders product info correctly 1`] = `
       class="quantity"
     >
       <button
+        aria-label="decrement quantity"
         class="decrement"
       >
         -
       </button>
+      <span
+        id="label1"
+      >
+        Quantity:
+      </span>
       <input
+        aria-labelledby="label1"
         data-testid="product_quantity"
-        id="product_quantity"
+        id="product_quantity1"
         type="text"
         value="0"
       />
       <button
+        aria-label="increment quantity"
         class="increment"
       >
         +

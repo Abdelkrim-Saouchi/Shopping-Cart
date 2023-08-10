@@ -7,9 +7,10 @@ exports[`renders homepage correctly 1`] = `
   >
     Copyright ©
     <a
+      aria-label="Go to developer's github profile"
       href="https://github.com/Abdelkrim-Saouchi"
     >
-       Krimothiazine
+      Krimothiazine
     </a>
   </footer>
 </div>

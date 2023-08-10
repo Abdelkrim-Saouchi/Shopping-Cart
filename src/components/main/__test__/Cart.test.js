@@ -1,6 +1,6 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+import React from 'react';
 import Cart from '../Cart';
 
 describe('Cart component', () => {
@@ -27,7 +27,7 @@ describe('Cart component', () => {
     expect(screen.getByText('Product 2')).toBeInTheDocument();
     expect(screen.getByText('Total: 0 $')).toBeInTheDocument();
     expect(screen.getByText('Checkout')).toBeInTheDocument();
-    expect(screen.getByText('Close')).toBeInTheDocument();
+    expect(screen.getByText('Close Cart')).toBeInTheDocument();
     expect(screen.queryByText('Cart is empty')).toBeNull();
   });
 
@@ -38,7 +38,7 @@ describe('Cart component', () => {
     expect(screen.getByText('Cart is empty')).toBeInTheDocument();
     expect(screen.getByText('Total: 0 $')).toBeInTheDocument();
     expect(screen.getByText('Checkout')).toBeInTheDocument();
-    expect(screen.getByText('Close')).toBeInTheDocument();
+    expect(screen.getByText('Close Cart')).toBeInTheDocument();
   });
 
   test('calls deleteProductFromCart when delete button is clicked', () => {
@@ -57,7 +57,7 @@ describe('Cart component', () => {
   test('calls toggleCart when Close button is clicked', () => {
     render(<Cart {...mockProps} />);
 
-    const closeButton = screen.getByText('Close');
+    const closeButton = screen.getByText('Close Cart');
     closeButton.click();
 
     expect(mockProps.toggleCart).toHaveBeenCalled();

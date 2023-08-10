@@ -14,16 +14,14 @@ exports[`renders homepage correctly 1`] = `
       <p>
         At FutureStore, we believe that shopping should be a delightful experience, and that's why we strive to provide you with the best products, exceptional customer service, and a seamless shopping experience. Browse our diverse range of products, find what you love, and let us take care of the rest.
       </p>
-      <button>
-        <a
-          href="/products"
-        >
-          Explore Now
-        </a>
-      </button>
+      <a
+        href="/products"
+      >
+        Explore Now
+      </a>
     </div>
     <img
-      alt="hero section img"
+      alt=""
       src="cheerful-satisfied-customer-holding-shopping-bags.jpg"
     />
   </main>
