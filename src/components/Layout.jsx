@@ -43,12 +43,6 @@ const Layout = () => {
       <HeaderContext.Provider value={{ productsNumber, toggleCart }}>
         <Header />
       </HeaderContext.Provider>
-      <ProductsContext.Provider
-        value={{ addProductToCart, deleteProductFromCart }}
-      >
-        <Outlet />
-      </ProductsContext.Provider>
-
       <Cart
         toggleCart={toggleCart}
         hidden={hidden}
@@ -57,6 +51,11 @@ const Layout = () => {
         total={total}
         calculateTotal={calculateTotal}
       />
+      <ProductsContext.Provider
+        value={{ addProductToCart, deleteProductFromCart }}
+      >
+        <Outlet />
+      </ProductsContext.Provider>
 
       <Footer />
     </>

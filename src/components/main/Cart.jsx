@@ -29,7 +29,7 @@ const Cart = ({
   });
 
   return (
-    <div
+    <aside
       className={
         hidden ? styles.shoppingCart + ' ' + styles.hidden : styles.shoppingCart
       }
@@ -43,8 +43,8 @@ const Cart = ({
 
       <p>Total: {total} $</p>
       <button>Checkout</button>
-      <button onClick={toggleCart}>Close</button>
-    </div>
+      <button onClick={toggleCart}>Close Cart</button>
+    </aside>
   );
 };
 
