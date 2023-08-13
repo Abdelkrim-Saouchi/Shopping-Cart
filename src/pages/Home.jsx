@@ -1,6 +1,8 @@
 // https://www.freepik.com/free-photo/cheerful-satisfied-customer-holding-shopping-bags_8132438.htm
 import { Link } from 'react-router-dom';
-import heroImg from '../assets/cheerful-satisfied-customer-holding-shopping-bags.jpg';
+import heroImg1178 from '../assets/cheerful-satisfied-customer-holding-shopping-bags,w_1178.jpg';
+import heroImg1534 from '../assets/cheerful-satisfied-customer-holding-shopping-bags,w_1534.jpg';
+import heroImg320 from '../assets/cheerful-satisfied-customer-holding-shopping-bags,w_320.jpg';
 import styles from './Home.module.css';
 
 const Home = () => {
@@ -20,7 +22,12 @@ const Home = () => {
         </p>
         <Link to="/products">Explore Now</Link>
       </div>
-      <img src={heroImg} alt="" />
+      <img
+        sizes="(max-width: 1534px) 100vw, 1534px"
+        srcSet={`${heroImg320} 320w, ${heroImg1178} 1178w, ${heroImg1534} 1534w`}
+        src={heroImg1534}
+        alt=""
+      />
     </main>
   );
 };
