@@ -9,7 +9,8 @@ The Odin Project Curriculum's project.
 3. Context API.
 4. Custom Hook.
 5. Css modules.
-6. New features of React Router v6.14.2(data routers and loaders).
+6. New features of React Router v6.14.2 (data routers and loaders).
+7. Responsive Design.
 
 ### Demo
 
