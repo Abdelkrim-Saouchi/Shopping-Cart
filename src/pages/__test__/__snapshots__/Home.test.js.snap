@@ -22,7 +22,9 @@ exports[`renders homepage correctly 1`] = `
     </div>
     <img
       alt=""
-      src="cheerful-satisfied-customer-holding-shopping-bags.jpg"
+      sizes="(max-width: 1534px) 100vw, 1534px"
+      src="cheerful-satisfied-customer-holding-shopping-bags,w_1534.jpg"
+      srcset="cheerful-satisfied-customer-holding-shopping-bags,w_320.jpg 320w, cheerful-satisfied-customer-holding-shopping-bags,w_1178.jpg 1178w, cheerful-satisfied-customer-holding-shopping-bags,w_1534.jpg 1534w"
     />
   </main>
 </div>
