@@ -64,6 +64,7 @@
 .shoppingList img {
   width: 40%;
   min-height: 80%;
+  object-fit: cover;
 }
 
 .shoppingList .remove {

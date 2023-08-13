@@ -18,6 +18,7 @@
   height: 50%;
   display: block;
   border-radius: 12px;
+  object-fit: contain;
 }
 
 .card h3 {
