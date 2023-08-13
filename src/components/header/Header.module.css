@@ -47,6 +47,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
 
 @media (max-width: 820px) {
@@ -61,6 +62,10 @@
 }
 
 @media (max-width: 630px) {
+  .closeMenu {
+    display: block;
+  }
+
   .header nav {
     opacity: 0;
     visibility: hidden;

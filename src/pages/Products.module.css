@@ -4,7 +4,14 @@
 
 .cardsContainer {
   display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 32px;
   padding-block: 32px;
+}
+
+@media (max-width: 900px) {
+  .cardsContainer {
+    gap: 16px;
+  }
 }
