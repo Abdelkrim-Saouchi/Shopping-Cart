@@ -17,7 +17,7 @@ const Products = () => {
           <Card
             key={product.id}
             id={product.id}
-            imgSrc={product.images[0]}
+            imgSrc={product.thumbnail}
             productName={product.title}
             price={product.price}
           />
