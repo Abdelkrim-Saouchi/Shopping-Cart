@@ -31,3 +31,9 @@
 .loading {
   opacity: 0.7;
 }
+
+@media (max-width: 600px) {
+  .container {
+    padding: 16px;
+  }
+}

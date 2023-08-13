@@ -1,7 +1,5 @@
 .Home {
   display: flex;
-  justify-content: center;
-  gap: 32px;
   font-family: 'Montserrat';
   color: var(--Primary-Color);
   padding-block: 32px;
@@ -39,4 +37,15 @@
 
 .heroSectionText a:is(:hover, :focus) {
   opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .Home {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .Home img {
+    width: 100%;
+  }
 }
