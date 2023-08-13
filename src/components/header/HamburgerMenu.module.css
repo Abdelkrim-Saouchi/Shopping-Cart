@@ -1,0 +1,18 @@
+.hamburger {
+  display: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  margin-block: 8px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+@media (max-width: 630px) {
+  .hamburger {
+    display: block;
+  }
+}
