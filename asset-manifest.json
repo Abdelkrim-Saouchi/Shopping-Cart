@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Shopping-Cart/static/css/main.dcf9a22d.css",
-    "main.js": "/Shopping-Cart/static/js/main.6593236a.js",
+    "main.css": "/Shopping-Cart/static/css/main.9c3241a0.css",
+    "main.js": "/Shopping-Cart/static/js/main.70704b14.js",
     "static/media/cheerful-satisfied-customer-holding-shopping-bags,w_1534.jpg": "/Shopping-Cart/static/media/cheerful-satisfied-customer-holding-shopping-bags,w_1534.bd9c2b716bb9b887476b.jpg",
     "static/media/cheerful-satisfied-customer-holding-shopping-bags,w_1178.jpg": "/Shopping-Cart/static/media/cheerful-satisfied-customer-holding-shopping-bags,w_1178.0e8d4715370080a88630.jpg",
     "static/media/github.png": "/Shopping-Cart/static/media/github.44eee0c4a6c25b0d7347.png",
@@ -10,11 +10,11 @@
     "static/media/cheerful-satisfied-customer-holding-shopping-bags,w_320.jpg": "/Shopping-Cart/static/media/cheerful-satisfied-customer-holding-shopping-bags,w_320.028d13c6471186bb7fbd.jpg",
     "index.html": "/Shopping-Cart/index.html",
     "static/media/cart-4-svgrepo-com.svg": "/Shopping-Cart/static/media/cart-4-svgrepo-com.548bc692c03a94cddf91001661a39bfa.svg",
-    "main.dcf9a22d.css.map": "/Shopping-Cart/static/css/main.dcf9a22d.css.map",
-    "main.6593236a.js.map": "/Shopping-Cart/static/js/main.6593236a.js.map"
+    "main.9c3241a0.css.map": "/Shopping-Cart/static/css/main.9c3241a0.css.map",
+    "main.70704b14.js.map": "/Shopping-Cart/static/js/main.70704b14.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcf9a22d.css",
-    "static/js/main.6593236a.js"
+    "static/css/main.9c3241a0.css",
+    "static/js/main.70704b14.js"
   ]
 }
