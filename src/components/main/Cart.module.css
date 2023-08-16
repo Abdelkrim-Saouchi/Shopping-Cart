@@ -33,7 +33,7 @@
 
 .shoppingCart h2 {
   font-family: 'Montserrat';
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 .hidden {
@@ -67,6 +67,14 @@
   object-fit: cover;
 }
 
+.shoppingList p:first-child {
+  font-weight: bold;
+}
+
+.shoppingCart p:last-child {
+  color: var(--Accent-Color-1);
+}
+
 .shoppingList .remove {
   width: 20px;
   margin: 0;
@@ -89,6 +97,10 @@
   margin-block: 0.67em;
 }
 
+.total {
+  font-weight: bold;
+}
+
 .shoppingCart button {
   max-width: 120px;
   font-size: inherit;
@@ -102,7 +114,7 @@
 }
 
 .shoppingCart button:last-child {
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 700;
 }
 

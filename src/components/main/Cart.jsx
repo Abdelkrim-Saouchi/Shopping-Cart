@@ -47,7 +47,7 @@ const Cart = ({
         <p className={styles.empty}>Cart is empty</p>
       )}
 
-      <p>Total: {total} $</p>
+      <p className={styles.total}>Total: {total} $</p>
       <button>Checkout</button>
       <button onClick={toggleCart}>Close Cart</button>
     </aside>

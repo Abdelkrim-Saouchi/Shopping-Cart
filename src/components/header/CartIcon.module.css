@@ -17,9 +17,9 @@
 .productsCounter {
   background-color: var(--Accent-Color-2);
   color: var(--Secondary-Color);
-  padding: 0.04em 0.08em;
+  padding: 0.05em 0.1em;
   border-radius: 50%;
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: 600;
   position: absolute;
   top: 0;
