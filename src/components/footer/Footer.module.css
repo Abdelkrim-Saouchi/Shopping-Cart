@@ -6,10 +6,9 @@
 
 .footer a {
   text-decoration: none;
-  color: inherit;
+  color: var(--Accent-Color-1);
 }
 
 .footer a:is(:hover, :focus) {
   text-decoration: underline;
-  color: var(--Accent-Color-1);
 }

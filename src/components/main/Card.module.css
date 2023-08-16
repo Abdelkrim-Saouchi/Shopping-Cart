@@ -1,11 +1,11 @@
 .card {
   width: 90%;
   min-height: 420px;
-  padding: 16px;
+  padding: 0.67em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 0.5em;
   font-size: inherit;
   border-radius: 12px;
   background-color: var(--Secondary-Color);
@@ -53,12 +53,12 @@
 .quantity button {
   height: 100%;
   width: 15%;
-  padding: 5px;
+  padding: 0.2em;
 }
 
 .card button {
   margin-top: auto;
-  padding: 8px 12px;
+  padding: 0.33em 0.5em;
   font-size: 1rem;
   cursor: pointer;
   background-color: var(--Accent-Color-1);

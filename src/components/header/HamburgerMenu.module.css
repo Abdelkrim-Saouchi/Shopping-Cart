@@ -6,7 +6,7 @@
   display: block;
   width: 35px;
   height: 5px;
-  margin-block: 8px;
+  margin-block: 0.33em;
   background-color: white;
   border-radius: 8px;
 }

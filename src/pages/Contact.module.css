@@ -8,8 +8,8 @@
 }
 .socialLinks {
   display: flex;
-  gap: 32px;
-  margin-bottom: 16px;
+  gap: 1.33em;
+  margin-bottom: 0.67em;
 }
 .socialLinks img {
   width: 50px;
